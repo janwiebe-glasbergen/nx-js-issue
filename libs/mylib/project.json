@@ -1,0 +1,26 @@
+{
+  "name": "mylib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/mylib/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/mylib",
+        "main": "libs/mylib/src/index.ts",
+        "tsConfig": "libs/mylib/tsconfig.lib.json",
+        "assets": [
+          "libs/mylib/*.md"
+        ],
+        "external": [
+          "@test2/dep-lib"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

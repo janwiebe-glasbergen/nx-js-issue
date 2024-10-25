@@ -1,0 +1,19 @@
+{
+  "name": "dep-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/dep-lib/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/dep-lib",
+        "main": "libs/dep-lib/src/index.ts",
+        "tsConfig": "libs/dep-lib/tsconfig.lib.json",
+        "assets": ["libs/dep-lib/*.md"]
+      }
+    }
+  },
+  "tags": []
+}
